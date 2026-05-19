@@ -1,259 +1,237 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>誠達株式会社</title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-  font-family:"Yu Gothic",sans-serif;
-  background:#f8fafc;
-  color:#222;
-  line-height:1.7;
+    font-family:
+    "Yu Gothic",
+    "Hiragino Sans",
+    sans-serif;
+    background:#f8fafc;
+    color:#222;
+    line-height:1.7;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
-}
-
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(10px);
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-.nav{
-  max-width:1200px;
-  margin:auto;
-  height:80px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 20px;
-}
-
-.logo{
-  font-size:28px;
-  font-weight:bold;
-}
-
-.menu{
-  display:flex;
-  gap:30px;
-}
-
-.menu a{
-  font-size:16px;
-  transition:0.3s;
-}
-
-.menu a:hover{
-  color:#2563eb;
-}
-
-.hero{
-  height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-  url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1920&auto=format&fit=crop")
-  center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  padding:20px;
-}
-
-.hero-content{
-  max-width:900px;
-}
-
-.hero h1{
-  font-size:52px;
-  margin-bottom:25px;
-  line-height:1.4;
-}
-
-.hero p{
-  font-size:22px;
-}
-
-.section{
-  padding:90px 20px;
+    text-decoration:none;
+    color:inherit;
 }
 
 .container{
-  max-width:1200px;
-  margin:auto;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    z-index:999;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.nav{
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo img{
+    width:42px;
+    margin-right:10px;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    font-size:16px;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    color:#fff;
+    padding-top:80px;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:25px;
+    line-height:1.4;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+section{
+    padding:90px 0;
 }
 
 .section-title{
-  text-align:center;
-  font-size:40px;
-  margin-bottom:60px;
-  color:#2563eb;
-  font-weight:bold;
+    text-align:center;
+    font-size:38px;
+    margin-bottom:60px;
+    font-weight:bold;
+    color:#0f172a;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:30px;
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
 }
 
 .card{
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  transition:0.3s;
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-8px);
+    transform:translateY(-5px);
 }
 
 .card img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
-.card-body{
-  padding:25px;
+.card-content{
+    padding:25px;
 }
 
 .card h3{
-  font-size:24px;
-  margin-bottom:15px;
+    margin-bottom:15px;
+    font-size:24px;
 }
 
-.card p{
-  color:#555;
-}
-
-.company-table{
-  width:100%;
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+.company{
+    background:#fff;
+    border-radius:14px;
+    padding:40px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
 }
 
 .company-row{
-  display:flex;
-  border-bottom:1px solid #eee;
-}
-
-.company-row:last-child{
-  border-bottom:none;
+    display:flex;
+    border-bottom:1px solid #ddd;
+    padding:18px 0;
 }
 
 .company-label{
-  width:240px;
-  background:#f1f5f9;
-  padding:20px;
-  font-weight:bold;
+    width:220px;
+    font-weight:bold;
 }
 
-.company-value{
-  flex:1;
-  padding:20px;
+.contact{
+    background:#fff;
+    border-radius:14px;
+    padding:40px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
 }
 
-.contact-box{
-  background:white;
-  border-radius:16px;
-  padding:40px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
 
-.contact-box h3{
-  text-align:center;
-  margin-bottom:35px;
-  font-size:32px;
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
 }
 
-.form-group{
-  margin-bottom:20px;
+textarea{
+    min-height:180px;
+    resize:vertical;
 }
 
-.form-group input,
-.form-group textarea{
-  width:100%;
-  padding:15px;
-  border:1px solid #d1d5db;
-  border-radius:10px;
-  font-size:16px;
+button{
+    background:#111827;
+    color:#fff;
+    border:none;
+    padding:16px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
 }
 
-.form-group textarea{
-  resize:vertical;
-}
-
-.submit-btn{
-  width:100%;
-  padding:16px;
-  border:none;
-  background:#2563eb;
-  color:white;
-  font-size:18px;
-  border-radius:12px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.submit-btn:hover{
-  background:#1d4ed8;
+button:hover{
+    background:#000;
 }
 
 footer{
-  background:#111827;
-  color:#9ca3af;
-  text-align:center;
-  padding:35px 20px;
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:30px;
+    margin-top:80px;
 }
 
 @media(max-width:768px){
 
-  .hero h1{
-    font-size:34px;
-  }
-
-  .hero p{
-    font-size:18px;
-  }
-
-  .menu{
+.menu{
     display:none;
-  }
+}
 
-  .company-row{
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.company-row{
     flex-direction:column;
-  }
+    gap:10px;
+}
 
-  .company-label{
-    width:100%;
-  }
+.company-label{
+    width:auto;
+}
 
 }
 
@@ -263,273 +241,205 @@ footer{
 <body>
 
 <header>
-  <div class="nav">
+<div class="container nav">
 
-    <div class="logo">
-      誠達株式会社
-    </div>
+<div class="logo">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+<span>誠達株式会社</span>
+</div>
 
-    <div class="menu">
-      <a href="#service">サービス</a>
-      <a href="#company">会社情報</a>
-      <a href="#contact">お問い合わせ</a>
-    </div>
+<div class="menu">
+<a href="#service">事業紹介</a>
+<a href="#company">会社情報</a>
+<a href="#contact">お問い合わせ</a>
+</div>
 
-  </div>
+</div>
 </header>
 
 <section class="hero">
 
-  <div class="hero-content">
+<div class="container hero-content">
 
-    <h1>
-      誠達株式会社は、日本を拠点とする<br>
-      国際市場向けの総合サービス企業です。
-    </h1>
+<h1>
+誠達株式会社は、日本を拠点とする国際市場向けの総合サービス企業です。
+</h1>
 
-    <p>
-      国際貿易、オンライン教育、民泊運営など多岐にわたる事業を展開しています。
-    </p>
+<p>
+業務は国際貿易、オンライン教育、民泊（ホテル）運営など多岐にわたります。
+</p>
 
-  </div>
-
-</section>
-
-<section class="section" id="service">
-
-  <div class="container">
-
-    <div class="section-title">
-      サービス
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-body">
-
-          <h3>国際貿易</h3>
-
-          <p>
-            日本製品を海外市場へ輸出し、
-            高品質な国際物流サービスを提供しています。
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-body">
-
-          <h3>オンライン教育</h3>
-
-          <p>
-            外国人講師による高品質なオンライン英語教育サービスを提供しています。
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-body">
-
-          <h3>民泊運営</h3>
-
-          <p>
-            大阪エリアを中心に高品質な宿泊施設を展開しています。
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<section class="section" id="company">
+<section id="service">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      会社情報
-    </div>
+<h2 class="section-title">
+サービス
+</h2>
 
-    <div class="company-table">
+<div class="services">
 
-      <div class="company-row">
-        <div class="company-label">会社名</div>
-        <div class="company-value">誠達株式会社</div>
-      </div>
+<div class="card">
 
-      <div class="company-row">
-        <div class="company-label">所在地</div>
-        <div class="company-value">
-          大阪市生野区鶴橋一丁目1番33-707号
-        </div>
-      </div>
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200">
 
-      <div class="company-row">
-        <div class="company-label">郵便番号</div>
-        <div class="company-value">〒544-0031</div>
-      </div>
+<div class="card-content">
 
-      <div class="company-row">
-        <div class="company-label">営業時間</div>
-        <div class="company-value">09:00 - 18:00</div>
-      </div>
+<h3>国際貿易</h3>
 
-      <div class="company-row">
-        <div class="company-label">設立</div>
-        <div class="company-value">2024/12/2</div>
-      </div>
+<p>
+日本の高品質製品を中国など海外市場へ輸出し、
+国際ビジネスを展開しています。
+</p>
 
-      <div class="company-row">
-        <div class="company-label">資本金</div>
-        <div class="company-value">3000万円</div>
-      </div>
+</div>
+</div>
 
-      <div class="company-row">
-        <div class="company-label">代表取締役</div>
-        <div class="company-value">陳信從</div>
-      </div>
+<div class="card">
 
-      <div class="company-row">
-        <div class="company-label">電話番号</div>
-        <div class="company-value">080-6185-2775</div>
-      </div>
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200">
 
-      <div class="company-row">
-        <div class="company-label">メール</div>
-        <div class="company-value">
-          info@chengdaworld.com
-        </div>
-      </div>
+<div class="card-content">
 
-      <div class="company-row">
-        <div class="company-label">事業内容</div>
-        <div class="company-value">
-          国際貿易、オンライン教育、民泊運営など
-        </div>
-      </div>
+<h3>オンライン英語教育</h3>
 
-    </div>
+<p>
+外国人教師による高品質なオンライン英語教育サービスを提供しています。
+</p>
 
-  </div>
+</div>
+</div>
 
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200">
+
+<div class="card-content">
+
+<h3>民泊（旅館）運営</h3>
+
+<p>
+大阪鶴橋エリアを中心に、
+高品質な宿泊施設を展開しています。
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
-<section class="section" id="contact">
+<section id="company">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      お問い合わせ
-    </div>
+<h2 class="section-title">
+会社情報
+</h2>
 
-    <div class="contact-box">
+<div class="company">
 
-      <h3>
-        ご質問がございましたらお気軽にお問い合わせください
-      </h3>
+<div class="company-row">
+<div class="company-label">会社名</div>
+<div>誠達株式会社</div>
+</div>
 
-      <!-- Formspree -->
-      <form
-        action="https://formspree.io/f/xxxxxxxx"
-        method="POST"
-      >
+<div class="company-row">
+<div class="company-label">所在地</div>
+<div>大阪市生野区鶴橋一丁目1番33-707号</div>
+</div>
 
-        <input
-          type="hidden"
-          name="_subject"
-          value="誠達株式会社 お問い合わせ"
-        >
+<div class="company-row">
+<div class="company-label">郵便番号</div>
+<div>〒544-0031</div>
+</div>
 
-        <div class="form-group">
+<div class="company-row">
+<div class="company-label">営業時間</div>
+<div>09:00 - 18:00</div>
+</div>
 
-          <input
-            type="text"
-            name="company"
-            placeholder="会社名"
-          >
+<div class="company-row">
+<div class="company-label">設立</div>
+<div>2024/12/2</div>
+</div>
 
-        </div>
+<div class="company-row">
+<div class="company-label">資本金</div>
+<div>3000万</div>
+</div>
 
-        <div class="form-group">
+<div class="company-row">
+<div class="company-label">代表取締役</div>
+<div>陳信從</div>
+</div>
 
-          <input
-            type="text"
-            name="name"
-            placeholder="お名前"
-            required
-          >
+<div class="company-row">
+<div class="company-label">電話番号</div>
+<div>080-6185-2775</div>
+</div>
 
-        </div>
+<div class="company-row">
+<div class="company-label">メール</div>
+<div>info@chengdaworld.com</div>
+</div>
 
-        <div class="form-group">
+</div>
+</div>
+</section>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="メールアドレス"
-            required
-          >
+<section id="contact">
 
-        </div>
+<div class="container">
 
-        <div class="form-group">
+<h2 class="section-title">
+お問い合わせ
+</h2>
 
-          <input
-            type="text"
-            name="phone"
-            placeholder="電話番号"
-          >
+<div class="contact">
 
-        </div>
+<form
+action="https://formspree.io/f/xldnqvve"
+method="POST"
+>
 
-        <div class="form-group">
+<input
+type="text"
+name="name"
+placeholder="お名前"
+required
+>
 
-          <textarea
-            name="message"
-            rows="7"
-            placeholder="お問い合わせ内容"
-            required
-          ></textarea>
+<input
+type="email"
+name="email"
+placeholder="メールアドレス"
+required
+>
 
-        </div>
+<textarea
+name="message"
+placeholder="お問い合わせ内容"
+required
+></textarea>
 
-        <button
-          type="submit"
-          class="submit-btn"
-        >
-          お問い合わせを送信
-        </button>
+<button type="submit">
+送信
+</button>
 
-      </form>
+</form>
 
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
 <footer>
-
-  Copyright © 2026 誠達株式会社 All Rights Reserved.
-
+Copyright © 2026 誠達株式会社 All Rights Reserved.
 </footer>
 
 </body>
